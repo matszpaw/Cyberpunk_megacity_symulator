@@ -21,3 +21,6 @@ class thing_in_itself:
 
 
 #space for storing all the features methods in form of functions
+#the "tick" is created by passing features into lists inside objects
+#simple ticker can be created by passing empty names 
+# into some dummy object
