@@ -20,7 +20,7 @@ RULES:
 
 ROADMAP:
 
-1.Create tribe class and basic state of procudion/consumption equilibium sorrounding them.
+1.Create tribe class and basic state of procudion/consumption equilibrium sorrounding them.
 
 2.Create amulet class and interactions_on_tick
 
