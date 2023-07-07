@@ -16,6 +16,8 @@ RULES:
 
 4.The point is to create cascading reaction to the equilibium
 
+
+
 ROADMAP:
 
 1.Create tribe class and basic state of procudion/consumption equilibium sorrounding them.
