@@ -19,6 +19,5 @@ class thing_in_itself:
         print(f'the feature {name_of_feature} has been added, beware of the consequences...')
 
 
-aaa='Droid Sans Mono'
 
-    #space for storing all the features methods in form of functions
+#space for storing all the features methods in form of functions
