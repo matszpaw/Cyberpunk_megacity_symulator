@@ -5,6 +5,7 @@ In high fantasy setting, live trbes functioning as one with nature. They have st
 
 
 RULES:
+
 1.Simulation must be discrete and use of randomness to be minimalized
 
 2.The world starts in the state of equilibirum
