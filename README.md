@@ -1,16 +1,25 @@
 # Ularon_project
 Fantasy world simulation
 
-in high fantasy setting the trbes function in state of eqilibium with nature. They have stable population and don't expand. Then gods decide to help them. Through sending powerful but chaotic amulets they aim to make fate of the tribes and nature surrounding them natunpredictable.
+In high fantasy setting the trbes function as one with nature. They have stable population and don't expand. Then gods decide to help them. Through sending powerful but chaotic amulets they aim to make fate of the tribes and nature surrounding them natunpredictable.
 
 
 RULES:
-1.simulation must be discrete and use of randomness to be minimalized
+1.Simulation must be discrete and use of randomness to be minimalized
 
-2.the only reaction is when you add a feature, the point is to create cascading ones
+2.The world starts in the state of equilibirum
 
-3.the symulation/game is about peaceful world where couple of powerful amulets spawn
+2.The only reaction is when you add a amulet
 
-4.every amulets has its own way to alter equilibrium, sometimes for the better, sometimes for the worse
+3.Every amulet has its own way to alter equilibrium, sometimes for the better, sometimes for the worse
 
-5.important thing is the creation of equilibirum, then ways to destroy it in intresting ways
+4.The point is to create cascading reaction to the equilibium
+
+ROADMAP:
+
+1.Create tribe class and basic state of procudion/consumption equilibium sorrounding them.
+
+2.Create amulet class and interactions_on_tick
+
+3.idk.
+
