@@ -1,7 +1,7 @@
 # Ularon_project
 Fantasy world simulation
 
-In high fantasy setting the trbes function as one with nature. They have stable population and don't expand. Then gods decide to help them. Through sending powerful but chaotic amulets they aim to make fate of the tribes and nature surrounding them natunpredictable.
+In high fantasy setting live trbes functioning as one with nature. They have stable population and don't expand. Then gods decide to help them. Through sending powerful but chaotic amulets they aim to make fate of the tribes and nature surrounding them natunpredictable.
 
 
 RULES:
