@@ -13,7 +13,7 @@ def generator(shape_of_world:list):
 test = generator([2,2])
 print(test)
 
+#def reading_map(map):
+    #has to acces every tile on the map and then use function on them
 
-
-
-
+#def resources(tile:str):
