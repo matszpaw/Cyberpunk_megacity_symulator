@@ -14,9 +14,7 @@ RULES:
 
 3.Every amulet has its own way to alter equilibrium, sometimes for the better, sometimes for the worse
 
-4.The point is to create cascading reaction to the equilibium
-
-
+4.The point is to create cascading reaction that alter the equilibrium in intresting ways
 
 ROADMAP:
 
