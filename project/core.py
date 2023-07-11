@@ -13,18 +13,3 @@ class thing_in_itself:
                 print(f'feature {self.list_of_features[x]} has been activated')
         else:
             print('no features to activate')
-
-#every subclass has its own set of features in form of function
-#they are activated by passing their names into that function
-#add logic in which parameters of simillar/neighbur objects change
-#on activation
-
-#list_of_stuff = []
-#for x in range(2):
-#    list_of_stuff.append(thing_in_itself([]))
-#list_of_stuff[1].add_feature('strong')
-#print(list_of_stuff[1])
-#thing1 = thing_in_itself([])
-#thing1.add_feature('strong')
-#print(thing1.list_of_features)
-#thing1.activate_features()
