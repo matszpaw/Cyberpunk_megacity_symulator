@@ -9,6 +9,7 @@ class land_feature:
         self.encounters_good = encounters_good
         self.encounters_bad = encounters_bad
 
+
     def make_tile(self,tile_name:str):
         if tile_name == 'meadows':
             self.encounters_bad.append(los.list_of_events)
@@ -37,3 +38,4 @@ def world_object_grid(shape_of_world:list):
 
 
 print(world_object_grid([2,2]))
+#next ---> animate this stuff and fill with real encounters
