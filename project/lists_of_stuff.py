@@ -1,6 +1,9 @@
 kinds_of_tiles = ['lake','forest','meadows','marsh']
 list_of_events = ['goblins','tresure','inn','wandering merchant']
 
+import random
+import numpy as np
+
 def generator(shape_of_world:list):
     world = []
     for i in range(shape_of_world[0]):
