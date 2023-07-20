@@ -24,6 +24,26 @@ class land_feature:
             self.encounters_bad.append('fish')
             self.encounters_good.append('fish')
 
+        #make functions that activate land features with text descriptions
+        #names of features are keys that retreve descriptions from dictionary in lists_of stuff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def world_object_grid(shape_of_world:list):
     world = []
     def row(z):
