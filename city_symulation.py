@@ -12,10 +12,10 @@ import os
 # production ---> consumes energy and people makes stuff
 
 # global symulation variables
-population = 10
-energy = 10
-production = 10
-happines = 10
+population = 0
+energy = 0
+production = 0
+happines = 0
 #global population, energy, production, happines
 kinds_of_tiles = ['energy', 'housing', 'production', 'lesure']
 
