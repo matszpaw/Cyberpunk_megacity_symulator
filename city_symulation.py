@@ -95,7 +95,5 @@ def space_and_time(turns, shape):
 space_and_time(20, [3, 3])
 
 #implement selector with elements goes first
-#implement builder function
 #implement absolute counter function
 #implement proximity bonus function
-#balace simulation
