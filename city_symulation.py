@@ -3,9 +3,6 @@ import random
 import numpy as np
 import os
 
-# cyberpunk city
-# city symulation where disctricts optimalize their placment
-
 # energy ---> generates overall energy consumes people to work
 # housing ---> consumes energy produces people
 # lesure ---> consumes enery and production
@@ -26,7 +23,6 @@ def generator(shape_of_world: list):
              for i in range(shape_of_world[1])]
         world.append(x)
     return np.array(world)
-
 
 def event_generator(world):
     global population, energy, production, happines
@@ -68,6 +64,68 @@ def event_generator(world):
                     else:
                         print('not enough people')
                         world[row, column] = 'housing'
+
+#alternative system
+
+def energy(world):
+    global energy
+    shape = np.shape(world)
+    for row in range(shape[0]):
+        for column in range(shape[1]):
+            if world[row, column] == 'energy':
+                if population > 0:
+                    energy = energy+1
+                    population = population-1
+                    print('more energy!!!')
+                else:
+                    print('not enough people')
+                    world[row, column] = 'housing'
+            else:
+                pass
+def housing(world):
+    global housing
+    shape = np.shape(world)
+    for row in range(shape[0]):
+        for column in range(shape[1]):
+            if world[row, column] == 'energy':
+            if energy > 0 and population > 0:
+                energy = energy-1
+                production = production+10
+                print('more stuff!!!')
+            else:
+                print('not enough energy')
+                world[row, column] = kinds_of_tiles[random.randint(0,1)]
+
+def production(world):
+    global production
+    shape = np.shape(world)
+    for row in range(shape[0]):
+        for column in range(shape[1]):
+            if world[row, column] == 'energy':
+
+def lesure(world):
+    global production
+    shape = np.shape(world)
+    for row in range(shape[0]):
+        for column in range(shape[1]):
+            if world[row, column] == 'lesure':
+                
+
+
+
+
+
+#iterator function
+
+
+
+
+
+
+
+
+
+
 
 def space_and_time(turns, shape):
     world = generator(shape)
