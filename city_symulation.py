@@ -2,130 +2,22 @@ import time
 import random
 import numpy as np
 import os
+import variables
+import event_functions
 
 # energy ---> generates overall energy consumes people to work
 # housing ---> consumes energy produces people
 # lesure ---> consumes enery and production
 # production ---> consumes energy and people makes stuff
 
-# global symulation variables
-population = 0
-energy = 0
-production = 0
-happines = 0
-#global population, energy, production, happines
-kinds_of_tiles = ['energy', 'housing', 'production', 'lesure']
-
 def generator(shape_of_world: list):
+    kinds_of_tiles = ['energy', 'housing', 'production', 'lesure']
     world = []
     for i in range(shape_of_world[0]):
         x = [kinds_of_tiles[random.randint(0, 3)]
              for i in range(shape_of_world[1])]
         world.append(x)
     return np.array(world)
-
-def event_generator(world):
-    global population, energy, production, happines
-    shape = np.shape(world)
-    for row in range(shape[0]):
-        for column in range(shape[1]):
-            match world[row, column]:
-                case 'lesure':
-                    if energy > 0 and population > 0:
-                        energy = energy-1
-                        production = production-1
-                        population = population-1
-                        happines = happines+1
-                        print('more happy!!!')
-                    else:
-                        print('not enough energy, production or population')
-                        world[row, column] = kinds_of_tiles[random.randint(0,2)]
-                case 'housing':
-                    if energy > 0:
-                        population = population+1
-                        energy = energy-1
-                        print('more people!!!')
-                    else:
-                        print('not enough energy')
-                        world[row, column] = 'energy'
-                case 'production':
-                    if energy > 0 and population > 0:
-                        energy = energy-1
-                        production = production+10
-                        print('more stuff!!!')
-                    else:
-                        print('not enough energy')
-                        world[row, column] = kinds_of_tiles[random.randint(0,1)]
-                case 'energy':
-                    if population > 0:
-                        energy = energy+10
-                        population = population-1
-                        print('more energy!!!')
-                    else:
-                        print('not enough people')
-                        world[row, column] = 'housing'
-
-#alternative system
-
-def energy(world):
-    global energy
-    shape = np.shape(world)
-    for row in range(shape[0]):
-        for column in range(shape[1]):
-            if world[row, column] == 'energy':
-                if population > 0:
-                    energy = energy+1
-                    population = population-1
-                    print('more energy!!!')
-                else:
-                    print('not enough people')
-                    world[row, column] = 'housing'
-            else:
-                pass
-def housing(world):
-    global housing
-    shape = np.shape(world)
-    for row in range(shape[0]):
-        for column in range(shape[1]):
-            if world[row, column] == 'energy':
-            if energy > 0 and population > 0:
-                energy = energy-1
-                production = production+10
-                print('more stuff!!!')
-            else:
-                print('not enough energy')
-                world[row, column] = kinds_of_tiles[random.randint(0,1)]
-
-def production(world):
-    global production
-    shape = np.shape(world)
-    for row in range(shape[0]):
-        for column in range(shape[1]):
-            if world[row, column] == 'energy':
-
-def lesure(world):
-    global production
-    shape = np.shape(world)
-    for row in range(shape[0]):
-        for column in range(shape[1]):
-            if world[row, column] == 'lesure':
-                
-
-
-
-
-
-#iterator function
-
-
-
-
-
-
-
-
-
-
 
 def space_and_time(turns, shape):
     world = generator(shape)
@@ -134,13 +26,13 @@ def space_and_time(turns, shape):
         print('')
         print('turn ',x+1, ' beginns!!!')
 
-        event_generator(world)
+        event_functions.event_generator(world)
 
         print('')
-        print('population: ',population)
-        print('production: ',production)
-        print('energy: ',energy)
-        print('happines: ',happines)
+        print('population: ',variables.population)
+        print('production: ',variables.production)
+        print('energy: ',variables.energy)
+        print('happines: ',variables.happines)
         print('')
 
         time.sleep(2)
